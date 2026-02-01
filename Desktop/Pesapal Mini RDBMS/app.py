@@ -23,10 +23,10 @@ def ui():
 def add_user_form():
     form = request.form
     try:
-        db.get_table("users").insert([
+        db.get_table("users").insert(   [
             form["id"],
             form["name"],
-            form["email"]__
+            form["email"]
         ])
     except Exception as e:
         print("Insert Error:", e)
@@ -95,4 +95,5 @@ def delete_user(user_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="127.0.0.1", port=5000)
+    app.run()
+

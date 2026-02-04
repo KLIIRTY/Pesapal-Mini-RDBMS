@@ -2,7 +2,7 @@
 
 A lightweight **Mini Database Management System (DBMS)** project built to demonstrate the core concepts of database operations, storage, and querying in a simplified environment.
 
----
+
 
 ## 🛠 Features
 
@@ -21,15 +21,12 @@ A lightweight **Mini Database Management System (DBMS)** project built to demons
 - **Validation & Error Handling**  
   Ensures data integrity and prevents invalid operations.
 
----
-
 ## 💻 Technologies Used
 
 - **Language:** Python  
 - **Data Storage:** JSON files  
 - **Tools:** Git, VS Code, Terminal
 
----
 
 ## 📂 Project Structure
 
@@ -42,7 +39,6 @@ mini-dbms/
 └── LICENSE # License file (optional)
 
 
----
 
 ## 🚀 How to Run
 

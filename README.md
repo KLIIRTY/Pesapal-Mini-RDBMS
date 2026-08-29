@@ -31,16 +31,22 @@ Pesapal-Mini-RDBMS/
 ├── tests/               # Automated unit and integration test suite
 ├── main.py              # Interactive CLI REPL entry point
 └── README.md            # Technical documentation
-🚀 Quick Start & CLI Usage
-1. Clone & Run
-Bash
+
+### 🚀 Quick Start & CLI Usage
+
+#### 1. Clone & Run
+
+```bash
 git clone [https://github.com/KelvinNjiru/Pesapal-Mini-RDBMS.git](https://github.com/KelvinNjiru/Pesapal-Mini-RDBMS.git)
 cd Pesapal-Mini-RDBMS
 python3 main.py
-2. Example Query Execution
-SQL
+```
+
+#### 2. Example Query Execution
+
+```sql
 -- Create a new table
-CREATE TABLE users id name role
+CREATE users id name role
 
 -- Insert records
 INSERT users 1 Kelvin "Network Engineer"
@@ -53,13 +59,22 @@ SELECT users WHERE id=1
 UPDATE users SET role="Lead Architect" WHERE id=1
 
 -- Delete records
-DELETE FROM users WHERE id=2
-🧪 Automated Testing
-Run the test suite to verify CRUD operations, schema validation, and storage integrity:
+DELETE users WHERE id=2
+```
 
-Bash
+---
+
+### 🧪 Automated Testing
+
+```bash
 pytest tests/
-👤 Author
-Kelvin Nyaga Njiru
+```
 
-Network Automation Engineer | Systems Developer
+---
+
+### 👤 Author
+
+**Kelvin Nyaga Njiru**  
+*Network Automation Engineer | Systems Developer*  
+* [LinkedIn](https://www.linkedin.com/in/kelvin-njiru)
+* [Portfolio](https://kelvinjiru.netlify.app/)

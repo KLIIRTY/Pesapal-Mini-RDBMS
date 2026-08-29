@@ -37,6 +37,9 @@ Pesapal-Mini-RDBMS/
 #### 1. Clone & Run
 
 ```bash
+#### 1. Clone & Run
+
+```bash
 git clone [https://github.com/KelvinNjiru/Pesapal-Mini-RDBMS.git](https://github.com/KelvinNjiru/Pesapal-Mini-RDBMS.git)
 cd Pesapal-Mini-RDBMS
 python3 main.py

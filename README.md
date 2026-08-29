@@ -1,82 +1,65 @@
-# Mini DBMS
+# Mini-RDBMS Engine 🗄️
 
-A lightweight **Mini Database Management System (DBMS)** project built to demonstrate the core concepts of database operations, storage, and querying in a simplified environment.
+**A Custom Relational Database Management System Built from First Principles in Python**
 
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Storage Engine: JSON/File-Backed](https://img.shields.io/badge/Storage-Persistent%20Disk%20I%2FO-brightgreen.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+A lightweight relational database management engine implemented without external database libraries (such as SQLite or SQLAlchemy). Designed to demonstrate core database internals including query tokenization, structured file-backed storage, parameterized CRUD operations, and transaction integrity.
 
-## 🛠 Features
+---
 
-- **Basic CRUD operations**  
-  Create, Read, Update, and Delete records from a mini database.
+### ⚡ Core Capabilities
 
-- **Simple Query Support**  
-  Perform searches using basic commands and conditions.
+* **Lexical Parser & Query Execution:** Custom SQL tokenizer and parser handling `CREATE`, `INSERT`, `SELECT`, `UPDATE`, and `DELETE` commands with conditional `WHERE` clause evaluation.
+* **Persistent File-Based Storage:** Structured disk persistence layer managing schema definitions, row serialization, and state across sessions.
+* **Interactive Command-Line Interface (CLI):** Full REPL interface providing interactive querying, formatted tabular output, and operational execution status.
+* **Integrity & Validation:** Enforces schema structure, input sanitization, and execution error-handling to prevent data corruption during disk operations.
 
-- **File-based Storage**  
-  Stores data in structured files to simulate persistent storage.
+---
 
-- **Command-line Interface**  
-  Interact with the database using intuitive terminal commands.
+### 🛠️ Project Architecture
 
-- **Validation & Error Handling**  
-  Ensures data integrity and prevents invalid operations.
+```text
+Pesapal-Mini-RDBMS/
+├── src/                 # Core engine source modules
+│   ├── parser.py        # SQL syntax tokenizer and validator
+│   ├── storage.py       # Disk I/O, table serialization and persistence
+│   └── execution.py     # Query execution planner and evaluation
+├── data/                # Sample database tables and disk storage files
+├── tests/               # Automated unit and integration test suite
+├── main.py              # Interactive CLI REPL entry point
+└── README.md            # Technical documentation
+🚀 Quick Start & CLI Usage
+1. Clone & Run
+Bash
+git clone [https://github.com/KelvinNjiru/Pesapal-Mini-RDBMS.git](https://github.com/KelvinNjiru/Pesapal-Mini-RDBMS.git)
+cd Pesapal-Mini-RDBMS
+python3 main.py
+2. Example Query Execution
+SQL
+-- Create a new table
+CREATE TABLE users id name role
 
-## 💻 Technologies Used
+-- Insert records
+INSERT users 1 Kelvin "Network Engineer"
+INSERT users 2 Alex "DevOps Specialist"
 
-- **Language:** Python  
-- **Data Storage:** JSON files  
-- **Tools:** Git, VS Code, Terminal
+-- Query with conditions
+SELECT users WHERE id=1
 
+-- Update records
+UPDATE users SET role="Lead Architect" WHERE id=1
 
-## 📂 Project Structure
+-- Delete records
+DELETE FROM users WHERE id=2
+🧪 Automated Testing
+Run the test suite to verify CRUD operations, schema validation, and storage integrity:
 
-mini-dbms/
-│
-├── src/ # Source code files
-├── data/ # Sample database files
-├── tests/ # Test scripts for functionality
-├── README.md # Project documentation
-└── LICENSE # License file (optional)
+Bash
+pytest tests/
+👤 Author
+Kelvin Nyaga Njiru
 
-
-
-## 🚀 How to Run
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/KLIIRTY/mini-dbms.git
-cd mini-dbms
-Run the main program:
-
-python main.py
-Follow the command-line prompts to perform CRUD operations.
-
-📊 Example Usage
-> CREATE table_name field1 field2
-> INSERT table_name value1 value2
-> SELECT table_name WHERE field1=value1
-> UPDATE table_name SET field2=value2 WHERE field1=value1
-> DELETE table_name WHERE field1=value1
-✅ What You’ll Learn
-Fundamentals of database design and management
-
-Handling persistent storage without a full-fledged DBMS
-
-Implementing data validation and error handling
-
-Working with command-line interfaces for user interaction
-
-🌟 Future Improvements
-Support for advanced queries (like joins or aggregates)
-
-Adding multi-user access and concurrency
-
-Integrating a GUI frontend
-
-Implementing indexing for faster queries
-
-📞 Contact
-Author: Kelvin Njiru
-GitHub: KLIIRTY
-Email: Nyagakevin822@gmail.com
+Network Automation Engineer | Systems Developer
